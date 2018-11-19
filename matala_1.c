@@ -50,9 +50,36 @@ int part1()
     
     }
 }
+int part2()
+{
+  char C;
+  char sequence[1000] = "";
+  char stop = '$';
+  char temp;
+  int count=0;
+  int ans=0;
+  printf("Enter char to count:\n");
+  scanf("%c",&C);  
+  if(C == 'm' || C == 'M' || C == 's' || C == 'S')
+  {
+      printf("Enter the chars sequence:");
+      while(temp != stop)
+      {
+          scanf(" %c",&temp);
+          if(temp==C)
+          {
+              ans++;
+          }
+          count++;
+      }
+      printf("The char with ASCII code %d appeared %d times",C,ans);
+  }
+  
+}
 
 int main()
 {
-    part1();
+   // part1();
+    part2();
     return 0;
 }
