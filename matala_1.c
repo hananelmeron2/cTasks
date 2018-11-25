@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//part one : the first question
 int part1()
 {
   int array[11];
@@ -50,20 +51,25 @@ int part1()
     
     }
 }
+
+//the secpond part : question 2.
 int part2()
 {
   char C;
-  char sequence[1000] = "";
   char stop = '$';
   char temp;
   int count=0;
   int ans=0;
   printf("Enter char to count:\n");
   scanf("%c",&C);  
+  
   if(C == 'm' || C == 'M' || C == 's' || C == 'S')
   {
       printf("Enter the chars sequence:");
-      while(temp != stop)
+      while(count<1000)
+      {
+ 
+      if(temp != stop)
       {
           scanf(" %c",&temp);
           if(temp==C)
@@ -72,14 +78,22 @@ int part2()
           }
           count++;
       }
-      printf("The char with ASCII code %d appeared %d times",C,ans);
+      if(temp== stop)
+      {
+          printf("The char with ASCII code %d appeared %d times",C,ans);
+          break;
+      }
+        }
+            
+
+      
   }
-  
-}
+  }
+
 
 int main()
 {
    // part1();
-    part2();
-    return 0;
+   // part2();
+      return 0;
 }
